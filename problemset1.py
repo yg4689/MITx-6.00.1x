@@ -1,13 +1,8 @@
-# Write a program that prints the number of times the string 'bob' occurs in s.
-# For example, if s = 'azcbobobegghakl', then your program should print
-substring = "bob"
+#Write a program that counts up the number of vowels contained in the string s. Valid vowels are: 'a', 'e', 'i', 'o', and 'u'.
+#For example, if s = 'azcbobobegghakl', your program should print:
+
 count=0
-start=0
-while start < len(s):
-    pos = s.find(substring,start)
-    if pos != -1:
+for char in s:
+    if char=="a" or char=="e" or char=="i" or char=="o" or char=="u":
         count+=1
-        start=pos+1
-    else:
-        break
-print("Number of times bob occurs is: ",count)
+print("Number of vowels: "+str(count))
